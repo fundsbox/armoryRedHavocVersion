@@ -140,6 +140,16 @@
             this.unitCardFieldRecon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.spottedRangeField = new System.Windows.Forms.Label();
+            this.spottedDistanceTitle = new System.Windows.Forms.Label();
+            this.DmgInt = new System.Windows.Forms.Label();
+            this.DmgIntTot = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.RearmTime = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.RearmTimeTotal = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label54 = new System.Windows.Forms.Label();
             this.groundRangeField = new System.Windows.Forms.Label();
@@ -228,6 +238,10 @@
             this.weaponPictureField = new System.Windows.Forms.PictureBox();
             this.unitCardFieldFirepower = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.RearmTimeSimple = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.RearmTimeTotalSimple = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
             this.flagSimple = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label104 = new System.Windows.Forms.Label();
@@ -408,6 +422,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.versionDropdown = new System.Windows.Forms.ComboBox();
             this.label52 = new System.Windows.Forms.Label();
+            this.spottedRangeSimple = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flagMobility)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yesEliteImageMobility)).BeginInit();
@@ -514,7 +530,7 @@
             this.unitList.FormattingEnabled = true;
             this.unitList.Location = new System.Drawing.Point(3, 185);
             this.unitList.Name = "unitList";
-            this.unitList.Size = new System.Drawing.Size(212, 381);
+            this.unitList.Size = new System.Drawing.Size(212, 407);
             this.unitList.TabIndex = 2;
             // 
             // label2
@@ -585,7 +601,7 @@
             this.tabPage5.Controls.Add(this.unitCardFieldMobility);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(381, 495);
+            this.tabPage5.Size = new System.Drawing.Size(381, 522);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mobility";
             // 
@@ -1299,7 +1315,7 @@
             this.tabPage4.Controls.Add(this.pictureBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(381, 495);
+            this.tabPage4.Size = new System.Drawing.Size(381, 522);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Recon";
             // 
@@ -1901,6 +1917,16 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(48)))), ((int)(((byte)(27)))));
+            this.tabPage3.Controls.Add(this.spottedRangeField);
+            this.tabPage3.Controls.Add(this.spottedDistanceTitle);
+            this.tabPage3.Controls.Add(this.DmgInt);
+            this.tabPage3.Controls.Add(this.DmgIntTot);
+            this.tabPage3.Controls.Add(this.label103);
+            this.tabPage3.Controls.Add(this.label107);
+            this.tabPage3.Controls.Add(this.RearmTime);
+            this.tabPage3.Controls.Add(this.label86);
+            this.tabPage3.Controls.Add(this.RearmTimeTotal);
+            this.tabPage3.Controls.Add(this.label66);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.flagFirepower);
             this.tabPage3.Controls.Add(this.eliteFieldFirepower);
@@ -1984,9 +2010,159 @@
             this.tabPage3.Controls.Add(this.unitCardFieldFirepower);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(381, 495);
+            this.tabPage3.Size = new System.Drawing.Size(381, 522);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Firepower";
+            // 
+            // spottedRangeField
+            // 
+            this.spottedRangeField.AutoSize = true;
+            this.spottedRangeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.spottedRangeField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.spottedRangeField.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.spottedRangeField.Location = new System.Drawing.Point(143, 503);
+            this.spottedRangeField.MinimumSize = new System.Drawing.Size(40, 0);
+            this.spottedRangeField.Name = "spottedRangeField";
+            this.spottedRangeField.Size = new System.Drawing.Size(40, 17);
+            this.spottedRangeField.TabIndex = 237;
+            this.spottedRangeField.Text = "bar";
+            this.spottedRangeField.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.spottedRangeField.Click += new System.EventHandler(this.label88_Click_2);
+            // 
+            // spottedDistanceTitle
+            // 
+            this.spottedDistanceTitle.AutoSize = true;
+            this.spottedDistanceTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.spottedDistanceTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.spottedDistanceTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.spottedDistanceTitle.Location = new System.Drawing.Point(16, 503);
+            this.spottedDistanceTitle.MinimumSize = new System.Drawing.Size(10, 0);
+            this.spottedDistanceTitle.Name = "spottedDistanceTitle";
+            this.spottedDistanceTitle.Size = new System.Drawing.Size(125, 17);
+            this.spottedDistanceTitle.TabIndex = 236;
+            this.spottedDistanceTitle.Text = "Bush Spotted Dist:";
+            this.spottedDistanceTitle.Click += new System.EventHandler(this.label60_Click_3);
+            // 
+            // DmgInt
+            // 
+            this.DmgInt.AutoSize = true;
+            this.DmgInt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.DmgInt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.DmgInt.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DmgInt.Location = new System.Drawing.Point(103, 211);
+            this.DmgInt.MinimumSize = new System.Drawing.Size(40, 0);
+            this.DmgInt.Name = "DmgInt";
+            this.DmgInt.Size = new System.Drawing.Size(40, 17);
+            this.DmgInt.TabIndex = 235;
+            this.DmgInt.Text = "bar";
+            this.DmgInt.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.DmgInt.Click += new System.EventHandler(this.label60_Click_2);
+            // 
+            // DmgIntTot
+            // 
+            this.DmgIntTot.AutoSize = true;
+            this.DmgIntTot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.DmgIntTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.DmgIntTot.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DmgIntTot.Location = new System.Drawing.Point(270, 211);
+            this.DmgIntTot.MinimumSize = new System.Drawing.Size(40, 0);
+            this.DmgIntTot.Name = "DmgIntTot";
+            this.DmgIntTot.Size = new System.Drawing.Size(40, 17);
+            this.DmgIntTot.TabIndex = 234;
+            this.DmgIntTot.Text = "bar";
+            this.DmgIntTot.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lockWeaponTooltip.SetToolTip(this.DmgIntTot, "Suppression splash");
+            this.DmgIntTot.Click += new System.EventHandler(this.label88_Click_1);
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label103.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label103.Location = new System.Drawing.Point(14, 211);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(88, 17);
+            this.label103.TabIndex = 233;
+            this.label103.Text = "Dmg Integral";
+            this.label103.Click += new System.EventHandler(this.label103_Click);
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label107.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label107.Location = new System.Drawing.Point(173, 211);
+            this.label107.MinimumSize = new System.Drawing.Size(80, 0);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(92, 17);
+            this.label107.TabIndex = 232;
+            this.label107.Text = "Dmg Int Total";
+            this.label107.Click += new System.EventHandler(this.label107_Click);
+            // 
+            // RearmTime
+            // 
+            this.RearmTime.AutoSize = true;
+            this.RearmTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.RearmTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.RearmTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RearmTime.Location = new System.Drawing.Point(75, 302);
+            this.RearmTime.MinimumSize = new System.Drawing.Size(40, 0);
+            this.RearmTime.Name = "RearmTime";
+            this.RearmTime.Size = new System.Drawing.Size(40, 17);
+            this.RearmTime.TabIndex = 231;
+            this.RearmTime.Text = "bar";
+            this.RearmTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lockWeaponTooltip.SetToolTip(this.RearmTime, "per shot");
+            this.RearmTime.Click += new System.EventHandler(this.label67_Click);
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label86.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label86.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label86.Location = new System.Drawing.Point(15, 302);
+            this.label86.MinimumSize = new System.Drawing.Size(70, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(70, 17);
+            this.label86.TabIndex = 230;
+            this.label86.Text = "Rearm:";
+            this.lockWeaponTooltip.SetToolTip(this.label86, "per shot");
+            this.label86.Click += new System.EventHandler(this.label86_Click);
+            // 
+            // RearmTimeTotal
+            // 
+            this.RearmTimeTotal.AutoSize = true;
+            this.RearmTimeTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.RearmTimeTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.RearmTimeTotal.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RearmTimeTotal.Location = new System.Drawing.Point(270, 302);
+            this.RearmTimeTotal.MinimumSize = new System.Drawing.Size(40, 0);
+            this.RearmTimeTotal.Name = "RearmTimeTotal";
+            this.RearmTimeTotal.Size = new System.Drawing.Size(40, 17);
+            this.RearmTimeTotal.TabIndex = 229;
+            this.RearmTimeTotal.Text = "bar";
+            this.RearmTimeTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lockWeaponTooltip.SetToolTip(this.RearmTimeTotal, "per shot");
+            this.RearmTimeTotal.Click += new System.EventHandler(this.label60_Click);
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label66.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label66.Location = new System.Drawing.Point(173, 302);
+            this.label66.MinimumSize = new System.Drawing.Size(70, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(93, 17);
+            this.label66.TabIndex = 228;
+            this.label66.Text = "Rearm Salvo:";
+            this.lockWeaponTooltip.SetToolTip(this.label66, "per shot");
+            this.label66.Click += new System.EventHandler(this.label66_Click);
             // 
             // groupBox4
             // 
@@ -1997,7 +2173,7 @@
             this.groupBox4.Controls.Add(this.planeRangeField);
             this.groupBox4.Controls.Add(this.label95);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox4.Location = new System.Drawing.Point(184, 315);
+            this.groupBox4.Location = new System.Drawing.Point(185, 339);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(173, 75);
             this.groupBox4.TabIndex = 227;
@@ -2036,7 +2212,7 @@
             this.heloRangeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.heloRangeField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.heloRangeField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.heloRangeField.Location = new System.Drawing.Point(48, 35);
+            this.heloRangeField.Location = new System.Drawing.Point(48, 37);
             this.heloRangeField.MinimumSize = new System.Drawing.Size(40, 0);
             this.heloRangeField.Name = "heloRangeField";
             this.heloRangeField.Size = new System.Drawing.Size(40, 17);
@@ -2182,7 +2358,7 @@
             this.missileMaxAccelField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.missileMaxAccelField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.missileMaxAccelField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.missileMaxAccelField.Location = new System.Drawing.Point(127, 442);
+            this.missileMaxAccelField.Location = new System.Drawing.Point(128, 466);
             this.missileMaxAccelField.MinimumSize = new System.Drawing.Size(40, 0);
             this.missileMaxAccelField.Name = "missileMaxAccelField";
             this.missileMaxAccelField.Size = new System.Drawing.Size(40, 17);
@@ -2196,7 +2372,7 @@
             this.label78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label78.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label78.Location = new System.Drawing.Point(13, 442);
+            this.label78.Location = new System.Drawing.Point(14, 466);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(120, 17);
             this.label78.TabIndex = 157;
@@ -2230,7 +2406,7 @@
             this.aimTimeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.aimTimeField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.aimTimeField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.aimTimeField.Location = new System.Drawing.Point(80, 255);
+            this.aimTimeField.Location = new System.Drawing.Point(80, 263);
             this.aimTimeField.MinimumSize = new System.Drawing.Size(40, 0);
             this.aimTimeField.Name = "aimTimeField";
             this.aimTimeField.Size = new System.Drawing.Size(40, 17);
@@ -2244,7 +2420,7 @@
             this.label69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label69.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label69.Location = new System.Drawing.Point(15, 255);
+            this.label69.Location = new System.Drawing.Point(15, 263);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(65, 17);
             this.label69.TabIndex = 150;
@@ -2256,7 +2432,7 @@
             this.missileMaxSpeedField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.missileMaxSpeedField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.missileMaxSpeedField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.missileMaxSpeedField.Location = new System.Drawing.Point(134, 423);
+            this.missileMaxSpeedField.Location = new System.Drawing.Point(135, 447);
             this.missileMaxSpeedField.MinimumSize = new System.Drawing.Size(40, 0);
             this.missileMaxSpeedField.Name = "missileMaxSpeedField";
             this.missileMaxSpeedField.Size = new System.Drawing.Size(40, 17);
@@ -2270,7 +2446,7 @@
             this.randomDispersionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.randomDispersionField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.randomDispersionField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.randomDispersionField.Location = new System.Drawing.Point(317, 423);
+            this.randomDispersionField.Location = new System.Drawing.Point(318, 447);
             this.randomDispersionField.MinimumSize = new System.Drawing.Size(40, 0);
             this.randomDispersionField.Name = "randomDispersionField";
             this.randomDispersionField.Size = new System.Drawing.Size(40, 17);
@@ -2284,7 +2460,7 @@
             this.puissanceField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.puissanceField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.puissanceField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.puissanceField.Location = new System.Drawing.Point(325, 462);
+            this.puissanceField.Location = new System.Drawing.Point(326, 486);
             this.puissanceField.MinimumSize = new System.Drawing.Size(40, 0);
             this.puissanceField.Name = "puissanceField";
             this.puissanceField.Size = new System.Drawing.Size(40, 17);
@@ -2299,7 +2475,7 @@
             this.tirReflexeField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.tirReflexeField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.tirReflexeField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.tirReflexeField.Location = new System.Drawing.Point(317, 442);
+            this.tirReflexeField.Location = new System.Drawing.Point(318, 466);
             this.tirReflexeField.MinimumSize = new System.Drawing.Size(40, 0);
             this.tirReflexeField.Name = "tirReflexeField";
             this.tirReflexeField.Size = new System.Drawing.Size(40, 17);
@@ -2313,7 +2489,7 @@
             this.angleDispersionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.angleDispersionField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.angleDispersionField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.angleDispersionField.Location = new System.Drawing.Point(317, 404);
+            this.angleDispersionField.Location = new System.Drawing.Point(318, 428);
             this.angleDispersionField.MinimumSize = new System.Drawing.Size(40, 0);
             this.angleDispersionField.Name = "angleDispersionField";
             this.angleDispersionField.Size = new System.Drawing.Size(40, 17);
@@ -2327,7 +2503,7 @@
             this.missileTimeBetweenCorrectionsField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.missileTimeBetweenCorrectionsField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.missileTimeBetweenCorrectionsField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.missileTimeBetweenCorrectionsField.Location = new System.Drawing.Point(224, 462);
+            this.missileTimeBetweenCorrectionsField.Location = new System.Drawing.Point(225, 486);
             this.missileTimeBetweenCorrectionsField.MinimumSize = new System.Drawing.Size(25, 0);
             this.missileTimeBetweenCorrectionsField.Name = "missileTimeBetweenCorrectionsField";
             this.missileTimeBetweenCorrectionsField.Size = new System.Drawing.Size(29, 17);
@@ -2341,7 +2517,7 @@
             this.minDispersionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.minDispersionField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.minDispersionField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.minDispersionField.Location = new System.Drawing.Point(277, 295);
+            this.minDispersionField.Location = new System.Drawing.Point(278, 319);
             this.minDispersionField.MinimumSize = new System.Drawing.Size(40, 0);
             this.minDispersionField.Name = "minDispersionField";
             this.minDispersionField.Size = new System.Drawing.Size(40, 17);
@@ -2355,7 +2531,7 @@
             this.label71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label71.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label71.Location = new System.Drawing.Point(173, 295);
+            this.label71.Location = new System.Drawing.Point(180, 319);
             this.label71.MinimumSize = new System.Drawing.Size(110, 0);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(110, 17);
@@ -2368,7 +2544,7 @@
             this.maxDispersionField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.maxDispersionField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.maxDispersionField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.maxDispersionField.Location = new System.Drawing.Point(119, 295);
+            this.maxDispersionField.Location = new System.Drawing.Point(120, 319);
             this.maxDispersionField.MinimumSize = new System.Drawing.Size(40, 0);
             this.maxDispersionField.Name = "maxDispersionField";
             this.maxDispersionField.Size = new System.Drawing.Size(40, 17);
@@ -2486,7 +2662,7 @@
             this.fireChanceField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.fireChanceField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.fireChanceField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.fireChanceField.Location = new System.Drawing.Point(259, 255);
+            this.fireChanceField.Location = new System.Drawing.Point(259, 263);
             this.fireChanceField.MinimumSize = new System.Drawing.Size(40, 0);
             this.fireChanceField.Name = "fireChanceField";
             this.fireChanceField.Size = new System.Drawing.Size(40, 17);
@@ -2500,7 +2676,7 @@
             this.label47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label47.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label47.Location = new System.Drawing.Point(173, 255);
+            this.label47.Location = new System.Drawing.Point(173, 263);
             this.label47.MinimumSize = new System.Drawing.Size(70, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(86, 17);
@@ -2541,7 +2717,7 @@
             this.label64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label64.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label64.Location = new System.Drawing.Point(15, 217);
+            this.label64.Location = new System.Drawing.Point(14, 228);
             this.label64.MinimumSize = new System.Drawing.Size(10, 0);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(82, 17);
@@ -2554,7 +2730,7 @@
             this.salvoReloadField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.salvoReloadField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.salvoReloadField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.salvoReloadField.Location = new System.Drawing.Point(260, 236);
+            this.salvoReloadField.Location = new System.Drawing.Point(260, 244);
             this.salvoReloadField.MinimumSize = new System.Drawing.Size(40, 0);
             this.salvoReloadField.Name = "salvoReloadField";
             this.salvoReloadField.Size = new System.Drawing.Size(40, 17);
@@ -2568,7 +2744,7 @@
             this.shotReloadField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.shotReloadField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.shotReloadField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.shotReloadField.Location = new System.Drawing.Point(95, 236);
+            this.shotReloadField.Location = new System.Drawing.Point(95, 244);
             this.shotReloadField.MinimumSize = new System.Drawing.Size(40, 0);
             this.shotReloadField.Name = "shotReloadField";
             this.shotReloadField.Size = new System.Drawing.Size(40, 17);
@@ -2582,7 +2758,7 @@
             this.salvoLengthField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.salvoLengthField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.salvoLengthField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.salvoLengthField.Location = new System.Drawing.Point(261, 217);
+            this.salvoLengthField.Location = new System.Drawing.Point(260, 228);
             this.salvoLengthField.MinimumSize = new System.Drawing.Size(40, 0);
             this.salvoLengthField.Name = "salvoLengthField";
             this.salvoLengthField.Size = new System.Drawing.Size(40, 17);
@@ -2596,7 +2772,7 @@
             this.label62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label62.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label62.Location = new System.Drawing.Point(173, 236);
+            this.label62.Location = new System.Drawing.Point(173, 244);
             this.label62.MinimumSize = new System.Drawing.Size(10, 0);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(91, 17);
@@ -2609,7 +2785,7 @@
             this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label44.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label44.Location = new System.Drawing.Point(15, 236);
+            this.label44.Location = new System.Drawing.Point(15, 244);
             this.label44.MinimumSize = new System.Drawing.Size(10, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(85, 17);
@@ -2622,7 +2798,7 @@
             this.label42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label42.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label42.Location = new System.Drawing.Point(173, 217);
+            this.label42.Location = new System.Drawing.Point(172, 228);
             this.label42.MinimumSize = new System.Drawing.Size(10, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(90, 17);
@@ -2635,7 +2811,7 @@
             this.noiseField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.noiseField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.noiseField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.noiseField.Location = new System.Drawing.Point(56, 404);
+            this.noiseField.Location = new System.Drawing.Point(57, 428);
             this.noiseField.MinimumSize = new System.Drawing.Size(40, 0);
             this.noiseField.Name = "noiseField";
             this.noiseField.Size = new System.Drawing.Size(40, 17);
@@ -2651,7 +2827,7 @@
             this.tagsLabel.ForeColor = System.Drawing.Color.Yellow;
             this.tagsLabel.Location = new System.Drawing.Point(169, 107);
             this.tagsLabel.Name = "tagsLabel";
-            this.tagsLabel.Size = new System.Drawing.Size(104, 16);
+            this.tagsLabel.Size = new System.Drawing.Size(103, 16);
             this.tagsLabel.TabIndex = 55;
             this.tagsLabel.Text = "tags will be here";
             this.tagsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2691,7 +2867,7 @@
             this.label106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label106.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label106.Location = new System.Drawing.Point(13, 423);
+            this.label106.Location = new System.Drawing.Point(14, 447);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(126, 17);
             this.label106.TabIndex = 103;
@@ -2703,7 +2879,7 @@
             this.label105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label105.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label105.Location = new System.Drawing.Point(188, 423);
+            this.label105.Location = new System.Drawing.Point(189, 447);
             this.label105.MinimumSize = new System.Drawing.Size(110, 0);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(134, 17);
@@ -2716,7 +2892,7 @@
             this.label100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label100.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label100.Location = new System.Drawing.Point(13, 404);
+            this.label100.Location = new System.Drawing.Point(14, 428);
             this.label100.MinimumSize = new System.Drawing.Size(10, 0);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(48, 17);
@@ -2729,7 +2905,7 @@
             this.label93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label93.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label93.Location = new System.Drawing.Point(15, 295);
+            this.label93.Location = new System.Drawing.Point(16, 319);
             this.label93.MinimumSize = new System.Drawing.Size(110, 0);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(110, 17);
@@ -2771,7 +2947,7 @@
             this.label85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label85.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label85.Location = new System.Drawing.Point(245, 442);
+            this.label85.Location = new System.Drawing.Point(246, 466);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(76, 17);
             this.label85.TabIndex = 77;
@@ -2798,7 +2974,7 @@
             this.label81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label81.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label81.Location = new System.Drawing.Point(13, 462);
+            this.label81.Location = new System.Drawing.Point(14, 486);
             this.label81.MinimumSize = new System.Drawing.Size(110, 0);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(211, 17);
@@ -2811,7 +2987,7 @@
             this.label79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label79.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label79.Location = new System.Drawing.Point(252, 462);
+            this.label79.Location = new System.Drawing.Point(253, 486);
             this.label79.MinimumSize = new System.Drawing.Size(10, 0);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(77, 17);
@@ -2836,7 +3012,7 @@
             this.rofField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.rofField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.rofField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rofField.Location = new System.Drawing.Point(97, 217);
+            this.rofField.Location = new System.Drawing.Point(96, 228);
             this.rofField.MinimumSize = new System.Drawing.Size(40, 0);
             this.rofField.Name = "rofField";
             this.rofField.Size = new System.Drawing.Size(40, 17);
@@ -2876,7 +3052,7 @@
             this.label73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label73.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label73.Location = new System.Drawing.Point(205, 404);
+            this.label73.Location = new System.Drawing.Point(206, 428);
             this.label73.MinimumSize = new System.Drawing.Size(110, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(115, 17);
@@ -2889,7 +3065,7 @@
             this.supplyCostField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.supplyCostField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.supplyCostField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.supplyCostField.Location = new System.Drawing.Point(258, 274);
+            this.supplyCostField.Location = new System.Drawing.Point(258, 282);
             this.supplyCostField.MinimumSize = new System.Drawing.Size(40, 0);
             this.supplyCostField.Name = "supplyCostField";
             this.supplyCostField.Size = new System.Drawing.Size(40, 17);
@@ -2904,7 +3080,7 @@
             this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label56.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label56.Location = new System.Drawing.Point(173, 274);
+            this.label56.Location = new System.Drawing.Point(173, 282);
             this.label56.MinimumSize = new System.Drawing.Size(70, 0);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(85, 17);
@@ -2931,7 +3107,7 @@
             this.ammoField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.ammoField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.ammoField.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ammoField.Location = new System.Drawing.Point(66, 274);
+            this.ammoField.Location = new System.Drawing.Point(66, 282);
             this.ammoField.MinimumSize = new System.Drawing.Size(40, 0);
             this.ammoField.Name = "ammoField";
             this.ammoField.Size = new System.Drawing.Size(40, 17);
@@ -2946,7 +3122,7 @@
             this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label41.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label41.Location = new System.Drawing.Point(15, 274);
+            this.label41.Location = new System.Drawing.Point(15, 282);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(51, 17);
             this.label41.TabIndex = 37;
@@ -3105,7 +3281,7 @@
             // unitCardFieldFirepower
             // 
             this.unitCardFieldFirepower.Image = ((System.Drawing.Image)(resources.GetObject("unitCardFieldFirepower.Image")));
-            this.unitCardFieldFirepower.Location = new System.Drawing.Point(18, 315);
+            this.unitCardFieldFirepower.Location = new System.Drawing.Point(19, 339);
             this.unitCardFieldFirepower.Name = "unitCardFieldFirepower";
             this.unitCardFieldFirepower.Size = new System.Drawing.Size(164, 84);
             this.unitCardFieldFirepower.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -3115,6 +3291,12 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(48)))), ((int)(((byte)(27)))));
+            this.tabPage1.Controls.Add(this.spottedRangeSimple);
+            this.tabPage1.Controls.Add(this.label88);
+            this.tabPage1.Controls.Add(this.RearmTimeSimple);
+            this.tabPage1.Controls.Add(this.label67);
+            this.tabPage1.Controls.Add(this.RearmTimeTotalSimple);
+            this.tabPage1.Controls.Add(this.label101);
             this.tabPage1.Controls.Add(this.flagSimple);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.eliteFieldSimple);
@@ -3204,9 +3386,67 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(381, 495);
+            this.tabPage1.Size = new System.Drawing.Size(381, 522);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Simple";
+            // 
+            // RearmTimeSimple
+            // 
+            this.RearmTimeSimple.AutoSize = true;
+            this.RearmTimeSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.RearmTimeSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.RearmTimeSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RearmTimeSimple.Location = new System.Drawing.Point(86, 296);
+            this.RearmTimeSimple.MinimumSize = new System.Drawing.Size(40, 0);
+            this.RearmTimeSimple.Name = "RearmTimeSimple";
+            this.RearmTimeSimple.Size = new System.Drawing.Size(40, 17);
+            this.RearmTimeSimple.TabIndex = 235;
+            this.RearmTimeSimple.Text = "bar";
+            this.RearmTimeSimple.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lockWeaponTooltip.SetToolTip(this.RearmTimeSimple, "per shot");
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label67.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label67.Location = new System.Drawing.Point(14, 296);
+            this.label67.MinimumSize = new System.Drawing.Size(70, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(70, 17);
+            this.label67.TabIndex = 234;
+            this.label67.Text = "Rearm:";
+            this.lockWeaponTooltip.SetToolTip(this.label67, "per shot");
+            // 
+            // RearmTimeTotalSimple
+            // 
+            this.RearmTimeTotalSimple.AutoSize = true;
+            this.RearmTimeTotalSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.RearmTimeTotalSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.RearmTimeTotalSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RearmTimeTotalSimple.Location = new System.Drawing.Point(278, 296);
+            this.RearmTimeTotalSimple.MinimumSize = new System.Drawing.Size(40, 0);
+            this.RearmTimeTotalSimple.Name = "RearmTimeTotalSimple";
+            this.RearmTimeTotalSimple.Size = new System.Drawing.Size(40, 17);
+            this.RearmTimeTotalSimple.TabIndex = 233;
+            this.RearmTimeTotalSimple.Text = "bar";
+            this.RearmTimeTotalSimple.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lockWeaponTooltip.SetToolTip(this.RearmTimeTotalSimple, "per shot");
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label101.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label101.Location = new System.Drawing.Point(175, 296);
+            this.label101.MinimumSize = new System.Drawing.Size(70, 0);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(93, 17);
+            this.label101.TabIndex = 232;
+            this.label101.Text = "Rearm Salvo:";
+            this.lockWeaponTooltip.SetToolTip(this.label101, "per shot");
             // 
             // flagSimple
             // 
@@ -3542,7 +3782,7 @@
             this.minDispersionFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.minDispersionFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.minDispersionFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.minDispersionFieldSimple.Location = new System.Drawing.Point(277, 295);
+            this.minDispersionFieldSimple.Location = new System.Drawing.Point(275, 317);
             this.minDispersionFieldSimple.MinimumSize = new System.Drawing.Size(40, 0);
             this.minDispersionFieldSimple.Name = "minDispersionFieldSimple";
             this.minDispersionFieldSimple.Size = new System.Drawing.Size(40, 17);
@@ -3556,7 +3796,7 @@
             this.label89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label89.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label89.Location = new System.Drawing.Point(173, 295);
+            this.label89.Location = new System.Drawing.Point(175, 317);
             this.label89.MinimumSize = new System.Drawing.Size(110, 0);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(110, 17);
@@ -3569,7 +3809,7 @@
             this.maxDispersionFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.maxDispersionFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.maxDispersionFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.maxDispersionFieldSimple.Location = new System.Drawing.Point(119, 295);
+            this.maxDispersionFieldSimple.Location = new System.Drawing.Point(117, 317);
             this.maxDispersionFieldSimple.MinimumSize = new System.Drawing.Size(40, 0);
             this.maxDispersionFieldSimple.Name = "maxDispersionFieldSimple";
             this.maxDispersionFieldSimple.Size = new System.Drawing.Size(40, 17);
@@ -3717,7 +3957,7 @@
             this.label110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label110.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label110.Location = new System.Drawing.Point(15, 295);
+            this.label110.Location = new System.Drawing.Point(13, 317);
             this.label110.MinimumSize = new System.Drawing.Size(110, 0);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(110, 17);
@@ -3939,7 +4179,7 @@
             this.tagsLabelSimple.ForeColor = System.Drawing.Color.Yellow;
             this.tagsLabelSimple.Location = new System.Drawing.Point(169, 107);
             this.tagsLabelSimple.Name = "tagsLabelSimple";
-            this.tagsLabelSimple.Size = new System.Drawing.Size(104, 16);
+            this.tagsLabelSimple.Size = new System.Drawing.Size(103, 16);
             this.tagsLabelSimple.TabIndex = 155;
             this.tagsLabelSimple.Text = "tags will be here";
             this.tagsLabelSimple.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -3963,7 +4203,7 @@
             this.supplyCapacityFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.supplyCapacityFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.supplyCapacityFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.supplyCapacityFieldSimple.Location = new System.Drawing.Point(63, 427);
+            this.supplyCapacityFieldSimple.Location = new System.Drawing.Point(61, 449);
             this.supplyCapacityFieldSimple.Name = "supplyCapacityFieldSimple";
             this.supplyCapacityFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.supplyCapacityFieldSimple.TabIndex = 70;
@@ -3976,7 +4216,7 @@
             this.altitudeFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.altitudeFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.altitudeFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.altitudeFieldSimple.Location = new System.Drawing.Point(310, 427);
+            this.altitudeFieldSimple.Location = new System.Drawing.Point(308, 449);
             this.altitudeFieldSimple.MaximumSize = new System.Drawing.Size(55, 0);
             this.altitudeFieldSimple.MinimumSize = new System.Drawing.Size(55, 0);
             this.altitudeFieldSimple.Name = "altitudeFieldSimple";
@@ -3991,7 +4231,7 @@
             this.label45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label45.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label45.Location = new System.Drawing.Point(15, 427);
+            this.label45.Location = new System.Drawing.Point(13, 449);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(55, 17);
             this.label45.TabIndex = 69;
@@ -4003,7 +4243,7 @@
             this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label43.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label43.Location = new System.Drawing.Point(252, 427);
+            this.label43.Location = new System.Drawing.Point(250, 449);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(59, 17);
             this.label43.TabIndex = 65;
@@ -4015,7 +4255,7 @@
             this.autonomyFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.autonomyFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.autonomyFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.autonomyFieldSimple.Location = new System.Drawing.Point(177, 427);
+            this.autonomyFieldSimple.Location = new System.Drawing.Point(175, 449);
             this.autonomyFieldSimple.Name = "autonomyFieldSimple";
             this.autonomyFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.autonomyFieldSimple.TabIndex = 56;
@@ -4028,7 +4268,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(103, 427);
+            this.label7.Location = new System.Drawing.Point(101, 449);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 17);
             this.label7.TabIndex = 55;
@@ -4037,7 +4277,7 @@
             // unitCardField
             // 
             this.unitCardField.Image = ((System.Drawing.Image)(resources.GetObject("unitCardField.Image")));
-            this.unitCardField.Location = new System.Drawing.Point(18, 315);
+            this.unitCardField.Location = new System.Drawing.Point(16, 337);
             this.unitCardField.Name = "unitCardField";
             this.unitCardField.Size = new System.Drawing.Size(164, 84);
             this.unitCardField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -4050,7 +4290,7 @@
             this.frontArmorFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.frontArmorFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.frontArmorFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.frontArmorFieldSimple.Location = new System.Drawing.Point(230, 315);
+            this.frontArmorFieldSimple.Location = new System.Drawing.Point(228, 337);
             this.frontArmorFieldSimple.Name = "frontArmorFieldSimple";
             this.frontArmorFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.frontArmorFieldSimple.TabIndex = 34;
@@ -4063,7 +4303,7 @@
             this.rearArmorFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.rearArmorFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.rearArmorFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rearArmorFieldSimple.Location = new System.Drawing.Point(231, 357);
+            this.rearArmorFieldSimple.Location = new System.Drawing.Point(229, 379);
             this.rearArmorFieldSimple.Name = "rearArmorFieldSimple";
             this.rearArmorFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.rearArmorFieldSimple.TabIndex = 33;
@@ -4076,7 +4316,7 @@
             this.topArmorFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.topArmorFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.topArmorFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.topArmorFieldSimple.Location = new System.Drawing.Point(229, 378);
+            this.topArmorFieldSimple.Location = new System.Drawing.Point(227, 400);
             this.topArmorFieldSimple.Name = "topArmorFieldSimple";
             this.topArmorFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.topArmorFieldSimple.TabIndex = 32;
@@ -4089,7 +4329,7 @@
             this.sideArmorFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.sideArmorFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.sideArmorFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.sideArmorFieldSimple.Location = new System.Drawing.Point(230, 336);
+            this.sideArmorFieldSimple.Location = new System.Drawing.Point(228, 358);
             this.sideArmorFieldSimple.Name = "sideArmorFieldSimple";
             this.sideArmorFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.sideArmorFieldSimple.TabIndex = 31;
@@ -4102,7 +4342,7 @@
             this.healthFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.healthFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.healthFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.healthFieldSimple.Location = new System.Drawing.Point(64, 406);
+            this.healthFieldSimple.Location = new System.Drawing.Point(62, 428);
             this.healthFieldSimple.MinimumSize = new System.Drawing.Size(20, 0);
             this.healthFieldSimple.Name = "healthFieldSimple";
             this.healthFieldSimple.Size = new System.Drawing.Size(29, 17);
@@ -4116,7 +4356,7 @@
             this.ecmFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.ecmFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.ecmFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ecmFieldSimple.Location = new System.Drawing.Point(240, 406);
+            this.ecmFieldSimple.Location = new System.Drawing.Point(238, 428);
             this.ecmFieldSimple.Name = "ecmFieldSimple";
             this.ecmFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.ecmFieldSimple.TabIndex = 29;
@@ -4129,7 +4369,7 @@
             this.sizeFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.sizeFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.sizeFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.sizeFieldSimple.Location = new System.Drawing.Point(315, 406);
+            this.sizeFieldSimple.Location = new System.Drawing.Point(313, 428);
             this.sizeFieldSimple.MaximumSize = new System.Drawing.Size(50, 0);
             this.sizeFieldSimple.MinimumSize = new System.Drawing.Size(50, 0);
             this.sizeFieldSimple.Name = "sizeFieldSimple";
@@ -4159,7 +4399,7 @@
             this.rearAvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.rearAvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.rearAvLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rearAvLabel.Location = new System.Drawing.Point(191, 357);
+            this.rearAvLabel.Location = new System.Drawing.Point(189, 379);
             this.rearAvLabel.MinimumSize = new System.Drawing.Size(40, 0);
             this.rearAvLabel.Name = "rearAvLabel";
             this.rearAvLabel.Size = new System.Drawing.Size(43, 17);
@@ -4172,7 +4412,7 @@
             this.topAvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.topAvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.topAvLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.topAvLabel.Location = new System.Drawing.Point(191, 378);
+            this.topAvLabel.Location = new System.Drawing.Point(189, 400);
             this.topAvLabel.MinimumSize = new System.Drawing.Size(40, 0);
             this.topAvLabel.Name = "topAvLabel";
             this.topAvLabel.Size = new System.Drawing.Size(40, 17);
@@ -4185,7 +4425,7 @@
             this.sideAvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.sideAvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.sideAvLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.sideAvLabel.Location = new System.Drawing.Point(191, 336);
+            this.sideAvLabel.Location = new System.Drawing.Point(189, 358);
             this.sideAvLabel.MinimumSize = new System.Drawing.Size(40, 0);
             this.sideAvLabel.Name = "sideAvLabel";
             this.sideAvLabel.Size = new System.Drawing.Size(40, 17);
@@ -4198,7 +4438,7 @@
             this.ecmLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.ecmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.ecmLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ecmLabel.Location = new System.Drawing.Point(203, 406);
+            this.ecmLabel.Location = new System.Drawing.Point(201, 428);
             this.ecmLabel.MinimumSize = new System.Drawing.Size(42, 0);
             this.ecmLabel.Name = "ecmLabel";
             this.ecmLabel.Size = new System.Drawing.Size(42, 17);
@@ -4211,7 +4451,7 @@
             this.frontAvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.frontAvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.frontAvLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.frontAvLabel.Location = new System.Drawing.Point(191, 315);
+            this.frontAvLabel.Location = new System.Drawing.Point(189, 337);
             this.frontAvLabel.MinimumSize = new System.Drawing.Size(40, 0);
             this.frontAvLabel.Name = "frontAvLabel";
             this.frontAvLabel.Size = new System.Drawing.Size(45, 17);
@@ -4224,7 +4464,7 @@
             this.healthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.healthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.healthLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.healthLabel.Location = new System.Drawing.Point(15, 406);
+            this.healthLabel.Location = new System.Drawing.Point(13, 428);
             this.healthLabel.Name = "healthLabel";
             this.healthLabel.Size = new System.Drawing.Size(53, 17);
             this.healthLabel.TabIndex = 20;
@@ -4236,7 +4476,7 @@
             this.sizeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.sizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.sizeLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.sizeLabel.Location = new System.Drawing.Point(281, 406);
+            this.sizeLabel.Location = new System.Drawing.Point(279, 428);
             this.sizeLabel.Name = "sizeLabel";
             this.sizeLabel.Size = new System.Drawing.Size(39, 17);
             this.sizeLabel.TabIndex = 18;
@@ -4261,7 +4501,7 @@
             this.speedFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.speedFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.speedFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.speedFieldSimple.Location = new System.Drawing.Point(151, 406);
+            this.speedFieldSimple.Location = new System.Drawing.Point(149, 428);
             this.speedFieldSimple.Name = "speedFieldSimple";
             this.speedFieldSimple.Size = new System.Drawing.Size(29, 17);
             this.speedFieldSimple.TabIndex = 15;
@@ -4274,7 +4514,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(103, 406);
+            this.label5.Location = new System.Drawing.Point(101, 428);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 14;
@@ -4286,7 +4526,7 @@
             this.stealthFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.stealthFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.stealthFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.stealthFieldSimple.Location = new System.Drawing.Point(125, 466);
+            this.stealthFieldSimple.Location = new System.Drawing.Point(123, 488);
             this.stealthFieldSimple.MinimumSize = new System.Drawing.Size(40, 0);
             this.stealthFieldSimple.Name = "stealthFieldSimple";
             this.stealthFieldSimple.Size = new System.Drawing.Size(40, 17);
@@ -4300,7 +4540,7 @@
             this.stealthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.stealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.stealthLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.stealthLabel.Location = new System.Drawing.Point(15, 466);
+            this.stealthLabel.Location = new System.Drawing.Point(13, 488);
             this.stealthLabel.MinimumSize = new System.Drawing.Size(110, 0);
             this.stealthLabel.Name = "stealthLabel";
             this.stealthLabel.Size = new System.Drawing.Size(110, 17);
@@ -4313,7 +4553,7 @@
             this.groundOpticsFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.groundOpticsFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.groundOpticsFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groundOpticsFieldSimple.Location = new System.Drawing.Point(125, 446);
+            this.groundOpticsFieldSimple.Location = new System.Drawing.Point(123, 468);
             this.groundOpticsFieldSimple.MinimumSize = new System.Drawing.Size(40, 0);
             this.groundOpticsFieldSimple.Name = "groundOpticsFieldSimple";
             this.groundOpticsFieldSimple.Size = new System.Drawing.Size(40, 17);
@@ -4327,7 +4567,7 @@
             this.airOpticsFieldSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.airOpticsFieldSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.airOpticsFieldSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.airOpticsFieldSimple.Location = new System.Drawing.Point(315, 446);
+            this.airOpticsFieldSimple.Location = new System.Drawing.Point(313, 468);
             this.airOpticsFieldSimple.MinimumSize = new System.Drawing.Size(50, 0);
             this.airOpticsFieldSimple.Name = "airOpticsFieldSimple";
             this.airOpticsFieldSimple.Size = new System.Drawing.Size(50, 17);
@@ -4341,7 +4581,7 @@
             this.airOpticsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.airOpticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.airOpticsLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.airOpticsLabel.Location = new System.Drawing.Point(210, 446);
+            this.airOpticsLabel.Location = new System.Drawing.Point(208, 468);
             this.airOpticsLabel.MinimumSize = new System.Drawing.Size(110, 0);
             this.airOpticsLabel.Name = "airOpticsLabel";
             this.airOpticsLabel.Size = new System.Drawing.Size(110, 17);
@@ -4351,7 +4591,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(172, 446);
+            this.pictureBox1.Location = new System.Drawing.Point(170, 468);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 24);
             this.pictureBox1.TabIndex = 7;
@@ -4363,7 +4603,7 @@
             this.groundOpticsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
             this.groundOpticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.groundOpticsLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groundOpticsLabel.Location = new System.Drawing.Point(15, 446);
+            this.groundOpticsLabel.Location = new System.Drawing.Point(13, 468);
             this.groundOpticsLabel.MinimumSize = new System.Drawing.Size(110, 0);
             this.groundOpticsLabel.Name = "groundOpticsLabel";
             this.groundOpticsLabel.Size = new System.Drawing.Size(110, 17);
@@ -4392,10 +4632,10 @@
             this.unitInfoTabControl.Controls.Add(this.tabPage5);
             this.unitInfoTabControl.Controls.Add(this.tabPage2);
             this.unitInfoTabControl.ItemSize = new System.Drawing.Size(43, 18);
-            this.unitInfoTabControl.Location = new System.Drawing.Point(230, 46);
+            this.unitInfoTabControl.Location = new System.Drawing.Point(230, 44);
             this.unitInfoTabControl.Name = "unitInfoTabControl";
             this.unitInfoTabControl.SelectedIndex = 0;
-            this.unitInfoTabControl.Size = new System.Drawing.Size(389, 521);
+            this.unitInfoTabControl.Size = new System.Drawing.Size(389, 548);
             this.unitInfoTabControl.TabIndex = 5;
             // 
             // tabPage2
@@ -4449,7 +4689,7 @@
             this.tabPage2.Controls.Add(this.unitCardFieldSurvivability);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(381, 495);
+            this.tabPage2.Size = new System.Drawing.Size(381, 522);
             this.tabPage2.TabIndex = 5;
             this.tabPage2.Text = "Survivability";
             // 
@@ -5488,7 +5728,7 @@
             // cloneButton
             // 
             this.cloneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cloneButton.Location = new System.Drawing.Point(6, 30);
+            this.cloneButton.Location = new System.Drawing.Point(6, 25);
             this.cloneButton.Name = "cloneButton";
             this.cloneButton.Size = new System.Drawing.Size(75, 23);
             this.cloneButton.TabIndex = 7;
@@ -5504,7 +5744,7 @@
             this.panelTopRight.Controls.Add(this.cloneButton);
             this.panelTopRight.Location = new System.Drawing.Point(535, 12);
             this.panelTopRight.Name = "panelTopRight";
-            this.panelTopRight.Size = new System.Drawing.Size(84, 54);
+            this.panelTopRight.Size = new System.Drawing.Size(84, 49);
             this.panelTopRight.TabIndex = 8;
             // 
             // categorySelect
@@ -5531,7 +5771,7 @@
             // versionDropdown
             // 
             this.versionDropdown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.versionDropdown.Location = new System.Drawing.Point(340, 15);
+            this.versionDropdown.Location = new System.Drawing.Point(340, 12);
             this.versionDropdown.Name = "versionDropdown";
             this.versionDropdown.Size = new System.Drawing.Size(89, 21);
             this.versionDropdown.TabIndex = 11;
@@ -5541,17 +5781,44 @@
             // 
             this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(231, 18);
+            this.label52.Location = new System.Drawing.Point(231, 15);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(111, 13);
             this.label52.TabIndex = 12;
             this.label52.Text = "Browse game version:";
             // 
+            // spottedRangeSimple
+            // 
+            this.spottedRangeSimple.AutoSize = true;
+            this.spottedRangeSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.spottedRangeSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.spottedRangeSimple.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.spottedRangeSimple.Location = new System.Drawing.Point(142, 505);
+            this.spottedRangeSimple.MinimumSize = new System.Drawing.Size(40, 0);
+            this.spottedRangeSimple.Name = "spottedRangeSimple";
+            this.spottedRangeSimple.Size = new System.Drawing.Size(40, 17);
+            this.spottedRangeSimple.TabIndex = 239;
+            this.spottedRangeSimple.Text = "bar";
+            this.spottedRangeSimple.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(34)))));
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label88.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label88.Location = new System.Drawing.Point(15, 505);
+            this.label88.MinimumSize = new System.Drawing.Size(10, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(125, 17);
+            this.label88.TabIndex = 238;
+            this.label88.Text = "Bush Spotted Dist:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 567);
+            this.ClientSize = new System.Drawing.Size(631, 597);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.versionDropdown);
             this.Controls.Add(this.panel1);
@@ -6034,6 +6301,22 @@
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.ComboBox versionDropdown;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label RearmTimeTotal;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label RearmTime;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label RearmTimeSimple;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label RearmTimeTotalSimple;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label DmgInt;
+        private System.Windows.Forms.Label DmgIntTot;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label spottedDistanceTitle;
+        private System.Windows.Forms.Label spottedRangeField;
+        private System.Windows.Forms.Label spottedRangeSimple;
+        private System.Windows.Forms.Label label88;
     }
 }
 

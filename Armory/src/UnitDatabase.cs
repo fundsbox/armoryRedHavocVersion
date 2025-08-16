@@ -526,6 +526,72 @@ namespace Armory {
             return "idk";
         }
 
+        public String getRearmTime()
+        {
+
+            NdfValueWrapper val;
+            if (currentWeaponHandle != null) if (currentWeaponHandle.TryGetValueFromQuery<NdfValueWrapper>("SupplyCost", out val))
+                {
+                    String result = val.ToString();
+                    if (getUnitMovingType() == "6")
+                    {
+                        result = divideStrings(result, "35");
+                        return divideStrings(result, getSalvoLength()) + "s/shot";
+                    }
+                    else
+                    {
+                        result = divideStrings(result, "25");
+                        return divideStrings(result, getSalvoLength()) + "s/shot";
+                    }
+
+                    }
+
+            return "idk";
+        }
+
+        public String getRearmTimeTotal()
+        {
+
+            NdfValueWrapper val;
+            if (currentWeaponHandle != null) if (currentWeaponHandle.TryGetValueFromQuery<NdfValueWrapper>("SupplyCost", out val))
+                {
+                    String result = val.ToString();
+                    if (getUnitMovingType() == "6")
+                    {
+                        return divideStrings(result, "35") + "s";
+                    }
+                    else { 
+                        return divideStrings(result, "25") + "s";
+                    }
+                }
+
+            return "idk";
+        }
+
+        public String getDmgIntegral()
+        {
+            NdfValueWrapper val;
+            NdfValueWrapper val2;
+            if (currentWeaponHandle != null) if (currentWeaponHandle.TryGetValueFromQuery<NdfValueWrapper>("RadiusSplashPhysicalDamages", out val)) if (currentWeaponHandle.TryGetValueFromQuery<NdfValueWrapper>("PhysicalDamages", out val2))
+                {
+                        string result = divideStrings(multiplyStrings(multiplyStrings(getHE(), getHeSplash()), getHeSplash()), "2112500");
+                        return result + " J7-H";
+                }
+             return "idk";
+        }
+
+        public String getDmgIntegralTotal()
+        {
+            NdfValueWrapper val;
+            NdfValueWrapper val2;
+            if (currentWeaponHandle != null) if (currentWeaponHandle.TryGetValueFromQuery<NdfValueWrapper>("RadiusSplashPhysicalDamages", out val)) if (currentWeaponHandle.TryGetValueFromQuery<NdfValueWrapper>("PhysicalDamages", out val2))
+                    {
+                        string result = divideStrings(multiplyStrings(multiplyStrings(getHE(), getHeSplash()), getHeSplash()), "2112500");
+                        result = multiplyStrings(getSalvoLength(), result);
+                        return result + " J7-H";
+                    }
+            return "idk";
+        }
         public String getAccuracy() {
 
             NdfValueWrapper val;
@@ -861,6 +927,41 @@ namespace Armory {
                 }
 
             return "idk";
+        }
+
+        public string getSpottedRange()
+        {
+            double[] detectionArray = { 220, 170, 120, 80 };
+            string[] labels = { "E", "VG", "G", "M" };
+            List<string> results = new List<string>();
+
+            // Get noise and stealth using their respective functions
+            double noise, stealth;
+            if (!double.TryParse(getNoise(), out noise) || !double.TryParse(getStealth(), out stealth) || stealth == 0)
+            {
+                // If noise or stealth is not available or stealth is zero, return "idk" for all
+                return string.Join("; ", labels.Select(_ => "idk"));
+            }
+
+            double stealthMultiplier = 3.0;
+
+            for (int i = 0; i < detectionArray.Length; i++)
+            {
+                double value = 37.5 * detectionArray[i] * noise / stealth / stealthMultiplier;
+                if (i == 0)
+                {
+                    value = Math.Min(value, 4200);
+                }
+                else
+                { 
+                    value = Math.Min(value, 3500);
+                }
+                
+                int roundedValue = (int)Math.Round(value);
+                results.Add($"{labels[i]} {roundedValue}");
+            }
+
+            return string.Join("; ", results);
         }
 
         public String getSalvoLength() {

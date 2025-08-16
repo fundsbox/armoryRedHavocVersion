@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
+using System.Reflection.Emit;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Armory
 {
@@ -477,7 +478,7 @@ namespace Armory
         private void weaponDropdown_SelectedIndexChanged(object sender, EventArgs e) {
             unitDatabase.setCurrentWeapon((Weapon)weaponDropdown.SelectedItem);
             customQueryOutputField.Text = unitDatabase.doCustomQuery(customQueryInput.Text);
-            
+
             // avoid callback                        
             weaponDropdownSimple.SelectedIndexChanged -= weaponDropdownSimple_SelectedIndexChanged;
             weaponDropdownSimple.SelectedItem = weaponDropdown.SelectedItem;
@@ -493,11 +494,15 @@ namespace Armory
             minCritChanceField.Text = unitDatabase.getMinCritChance();
             stabilizerField.Text = unitDatabase.getStabilizer();
             supplyCostField.Text = unitDatabase.getSupplyCost();
+            RearmTime.Text = unitDatabase.getRearmTime();
+            RearmTimeTotal.Text = unitDatabase.getRearmTimeTotal();
             suppressionField.Text = unitDatabase.getSuppression();
             suppressionSplashRadius.Text = unitDatabase.getSuppressionSplash();
             heField.Text = unitDatabase.getHE();
             apField.Text = unitDatabase.getAP();
             heSplashField.Text = unitDatabase.getHeSplash();
+            DmgInt.Text = unitDatabase.getDmgIntegral();
+            DmgIntTot.Text = unitDatabase.getDmgIntegralTotal();
             tagsLabel.Text = unitDatabase.getTags();
             groundRangeField.Text = unitDatabase.getGroundRange();
             heloRangeField.Text = unitDatabase.getHeloRange();
@@ -518,6 +523,7 @@ namespace Armory
             missileMaxSpeedField.Text = unitDatabase.getMissileMaxSpeed();
             ammoField.Text = unitDatabase.getAmmo();
             missileMaxAccelField.Text = unitDatabase.getMissileMaxAcceleration();
+            spottedRangeField.Text = unitDatabase.getSpottedRange();
             // END firepower controls -----------
             #endregion
 
@@ -542,8 +548,11 @@ namespace Armory
             missileSpeedFieldSimple.Text = missileMaxSpeedField.Text;
             supplyCostFieldSimple.Text = supplyCostField.Text;
             turretFieldSimple.Text = turretField.Text;
+            RearmTimeSimple.Text = RearmTime.Text;
+            RearmTimeTotalSimple.Text = RearmTimeTotal.Text;
             tagsLabelSimple.Text = tagsLabel.Text;
             suppressionFieldSimple.Text = suppressionField.Text;
+            spottedRangeSimple.Text = spottedRangeField.Text;
             // END simple controls --------------
             #endregion
         }
@@ -582,7 +591,7 @@ namespace Armory
         private void checkForUpdatesButton_Click(object sender, EventArgs e) {
             Updater updater = new Updater();
 
-            if (updater.updateAvailable()) {
+            if (false/*updater.updateAvailable()*/) {
                 // update
                 ProgressBar progressBar = new ProgressBar();
                 progressBar.Name = "downloadProgressBar";
@@ -612,7 +621,7 @@ namespace Armory
             }
             else {
                 // remove button, show and disappear text
-                Label updateMessageLabel = new Label();
+                System.Windows.Forms.Label updateMessageLabel = new System.Windows.Forms.Label();
                 updateMessageLabel.Name = "updateMessageLabel";
                 updateMessageLabel.Text = "at newest version";
                 updateMessageLabel.Location = checkForUpdatesButton.Location;
@@ -642,6 +651,66 @@ namespace Armory
 
         private void versionDropdown_SelectedIndexChanged(object sender, EventArgs e) {
             unitDatabase = UnitDatabasePool.getUnitDatabasePool().getUnitDatabase(this, versionDropdown.GetItemText(versionDropdown.SelectedItem));
+        }
+
+        private void label66_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label86_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label67_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label88_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label103_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label88_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label107_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label88_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
